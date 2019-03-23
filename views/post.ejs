@@ -1,0 +1,9 @@
+<%- include("partials/header"); -%>
+  <h1><%= postTitle%></h1>
+
+  <% function replaceAll(str, find, replace) { %>
+  <%  return str.replace(new RegExp(find, 'g'), replace); %>
+  <%} %>
+
+  <p><%- replaceAll(postBody,'\n', '<br>') %></p>
+<%- include("partials/footer"); -%>
